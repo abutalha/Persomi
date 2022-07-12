@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52CF498D287E1B8B00DB700D /* PersomiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF498C287E1B8B00DB700D /* PersomiApp.swift */; };
+		52CF498F287E1B8B00DB700D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF498E287E1B8B00DB700D /* ContentView.swift */; };
+		52CF4991287E1B8D00DB700D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CF4990287E1B8D00DB700D /* Assets.xcassets */; };
+		52CF4994287E1B8D00DB700D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */; };
+		52CF499E287E1B8D00DB700D /* PersomiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF499D287E1B8D00DB700D /* PersomiTests.swift */; };
+		52CF49A8287E1B8D00DB700D /* PersomiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49A7287E1B8D00DB700D /* PersomiUITests.swift */; };
+		52CF49AA287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49A9287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52CF499A287E1B8D00DB700D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52CF4981287E1B8B00DB700D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52CF4988287E1B8B00DB700D;
+			remoteInfo = Persomi;
+		};
+		52CF49A4287E1B8D00DB700D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52CF4981287E1B8B00DB700D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52CF4988287E1B8B00DB700D;
+			remoteInfo = Persomi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52CF4989287E1B8B00DB700D /* Persomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CF498C287E1B8B00DB700D /* PersomiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiApp.swift; sourceTree = "<group>"; };
+		52CF498E287E1B8B00DB700D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52CF4990287E1B8D00DB700D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52CF4999287E1B8D00DB700D /* PersomiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CF499D287E1B8D00DB700D /* PersomiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiTests.swift; sourceTree = "<group>"; };
+		52CF49A3287E1B8D00DB700D /* PersomiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersomiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CF49A7287E1B8D00DB700D /* PersomiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiUITests.swift; sourceTree = "<group>"; };
+		52CF49A9287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52CF4986287E1B8B00DB700D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CF4996287E1B8D00DB700D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CF49A0287E1B8D00DB700D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52CF4980287E1B8B00DB700D = {
+			isa = PBXGroup;
+			children = (
+				52CF498B287E1B8B00DB700D /* Persomi */,
+				52CF499C287E1B8D00DB700D /* PersomiTests */,
+				52CF49A6287E1B8D00DB700D /* PersomiUITests */,
+				52CF498A287E1B8B00DB700D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52CF498A287E1B8B00DB700D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52CF4989287E1B8B00DB700D /* Persomi.app */,
+				52CF4999287E1B8D00DB700D /* PersomiTests.xctest */,
+				52CF49A3287E1B8D00DB700D /* PersomiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52CF498B287E1B8B00DB700D /* Persomi */ = {
+			isa = PBXGroup;
+			children = (
+				52CF498C287E1B8B00DB700D /* PersomiApp.swift */,
+				52CF498E287E1B8B00DB700D /* ContentView.swift */,
+				52CF4990287E1B8D00DB700D /* Assets.xcassets */,
+				52CF4992287E1B8D00DB700D /* Preview Content */,
+			);
+			path = Persomi;
+			sourceTree = "<group>";
+		};
+		52CF4992287E1B8D00DB700D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52CF499C287E1B8D00DB700D /* PersomiTests */ = {
+			isa = PBXGroup;
+			children = (
+				52CF499D287E1B8D00DB700D /* PersomiTests.swift */,
+			);
+			path = PersomiTests;
+			sourceTree = "<group>";
+		};
+		52CF49A6287E1B8D00DB700D /* PersomiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52CF49A7287E1B8D00DB700D /* PersomiUITests.swift */,
+				52CF49A9287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift */,
+			);
+			path = PersomiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52CF4988287E1B8B00DB700D /* Persomi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CF49AD287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "Persomi" */;
+			buildPhases = (
+				52CF4985287E1B8B00DB700D /* Sources */,
+				52CF4986287E1B8B00DB700D /* Frameworks */,
+				52CF4987287E1B8B00DB700D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Persomi;
+			productName = Persomi;
+			productReference = 52CF4989287E1B8B00DB700D /* Persomi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52CF4998287E1B8D00DB700D /* PersomiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CF49B0287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "PersomiTests" */;
+			buildPhases = (
+				52CF4995287E1B8D00DB700D /* Sources */,
+				52CF4996287E1B8D00DB700D /* Frameworks */,
+				52CF4997287E1B8D00DB700D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52CF499B287E1B8D00DB700D /* PBXTargetDependency */,
+			);
+			name = PersomiTests;
+			productName = PersomiTests;
+			productReference = 52CF4999287E1B8D00DB700D /* PersomiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52CF49A2287E1B8D00DB700D /* PersomiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CF49B3287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "PersomiUITests" */;
+			buildPhases = (
+				52CF499F287E1B8D00DB700D /* Sources */,
+				52CF49A0287E1B8D00DB700D /* Frameworks */,
+				52CF49A1287E1B8D00DB700D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52CF49A5287E1B8D00DB700D /* PBXTargetDependency */,
+			);
+			name = PersomiUITests;
+			productName = PersomiUITests;
+			productReference = 52CF49A3287E1B8D00DB700D /* PersomiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52CF4981287E1B8B00DB700D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					52CF4988287E1B8B00DB700D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					52CF4998287E1B8D00DB700D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 52CF4988287E1B8B00DB700D;
+					};
+					52CF49A2287E1B8D00DB700D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 52CF4988287E1B8B00DB700D;
+					};
+				};
+			};
+			buildConfigurationList = 52CF4984287E1B8B00DB700D /* Build configuration list for PBXProject "Persomi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52CF4980287E1B8B00DB700D;
+			productRefGroup = 52CF498A287E1B8B00DB700D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52CF4988287E1B8B00DB700D /* Persomi */,
+				52CF4998287E1B8D00DB700D /* PersomiTests */,
+				52CF49A2287E1B8D00DB700D /* PersomiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52CF4987287E1B8B00DB700D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CF4994287E1B8D00DB700D /* Preview Assets.xcassets in Resources */,
+				52CF4991287E1B8D00DB700D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CF4997287E1B8D00DB700D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CF49A1287E1B8D00DB700D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52CF4985287E1B8B00DB700D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CF498F287E1B8B00DB700D /* ContentView.swift in Sources */,
+				52CF498D287E1B8B00DB700D /* PersomiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CF4995287E1B8D00DB700D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CF499E287E1B8D00DB700D /* PersomiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CF499F287E1B8D00DB700D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CF49AA287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift in Sources */,
+				52CF49A8287E1B8D00DB700D /* PersomiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52CF499B287E1B8D00DB700D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52CF4988287E1B8B00DB700D /* Persomi */;
+			targetProxy = 52CF499A287E1B8D00DB700D /* PBXContainerItemProxy */;
+		};
+		52CF49A5287E1B8D00DB700D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52CF4988287E1B8B00DB700D /* Persomi */;
+			targetProxy = 52CF49A4287E1B8D00DB700D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52CF49AB287E1B8D00DB700D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52CF49AC287E1B8D00DB700D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52CF49AE287E1B8D00DB700D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Persomi/Preview Content\"";
+				DEVELOPMENT_TEAM = 35Y7TCQ45E;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abu.Persomi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52CF49AF287E1B8D00DB700D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Persomi/Preview Content\"";
+				DEVELOPMENT_TEAM = 35Y7TCQ45E;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abu.Persomi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52CF49B1287E1B8D00DB700D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35Y7TCQ45E;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abu.PersomiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Persomi.app/Persomi";
+			};
+			name = Debug;
+		};
+		52CF49B2287E1B8D00DB700D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35Y7TCQ45E;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abu.PersomiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Persomi.app/Persomi";
+			};
+			name = Release;
+		};
+		52CF49B4287E1B8D00DB700D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35Y7TCQ45E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abu.PersomiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Persomi;
+			};
+			name = Debug;
+		};
+		52CF49B5287E1B8D00DB700D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35Y7TCQ45E;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abu.PersomiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Persomi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52CF4984287E1B8B00DB700D /* Build configuration list for PBXProject "Persomi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CF49AB287E1B8D00DB700D /* Debug */,
+				52CF49AC287E1B8D00DB700D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CF49AD287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "Persomi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CF49AE287E1B8D00DB700D /* Debug */,
+				52CF49AF287E1B8D00DB700D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CF49B0287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "PersomiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CF49B1287E1B8D00DB700D /* Debug */,
+				52CF49B2287E1B8D00DB700D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CF49B3287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "PersomiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CF49B4287E1B8D00DB700D /* Debug */,
+				52CF49B5287E1B8D00DB700D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52CF4981287E1B8B00DB700D /* Project object */;
+}
