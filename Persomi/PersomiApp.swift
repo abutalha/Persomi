@@ -11,7 +11,7 @@ import SwiftUI
 struct PersomiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            IntroScreen()
         }
     }
 }

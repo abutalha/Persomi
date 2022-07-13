@@ -8,23 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		52CF498D287E1B8B00DB700D /* PersomiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF498C287E1B8B00DB700D /* PersomiApp.swift */; };
-		52CF498F287E1B8B00DB700D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF498E287E1B8B00DB700D /* ContentView.swift */; };
 		52CF4991287E1B8D00DB700D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CF4990287E1B8D00DB700D /* Assets.xcassets */; };
 		52CF4994287E1B8D00DB700D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */; };
 		52CF499E287E1B8D00DB700D /* PersomiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF499D287E1B8D00DB700D /* PersomiTests.swift */; };
-		52CF49A8287E1B8D00DB700D /* PersomiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49A7287E1B8D00DB700D /* PersomiUITests.swift */; };
-		52CF49AA287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49A9287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift */; };
+		52CF49EA287E250900DB700D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CF49E9287E250900DB700D /* LaunchScreen.storyboard */; };
+		52CF49EC287EA5C600DB700D /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49EB287EA5C600DB700D /* IntroScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		52CF499A287E1B8D00DB700D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52CF4981287E1B8B00DB700D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52CF4988287E1B8B00DB700D;
-			remoteInfo = Persomi;
-		};
-		52CF49A4287E1B8D00DB700D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52CF4981287E1B8B00DB700D /* Project object */;
 			proxyType = 1;
@@ -36,14 +28,13 @@
 /* Begin PBXFileReference section */
 		52CF4989287E1B8B00DB700D /* Persomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CF498C287E1B8B00DB700D /* PersomiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiApp.swift; sourceTree = "<group>"; };
-		52CF498E287E1B8B00DB700D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52CF4990287E1B8D00DB700D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52CF4999287E1B8D00DB700D /* PersomiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CF499D287E1B8D00DB700D /* PersomiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiTests.swift; sourceTree = "<group>"; };
-		52CF49A3287E1B8D00DB700D /* PersomiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersomiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52CF49A7287E1B8D00DB700D /* PersomiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiUITests.swift; sourceTree = "<group>"; };
-		52CF49A9287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52CF49E8287E1FEB00DB700D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		52CF49E9287E250900DB700D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52CF49EB287EA5C600DB700D /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52CF49A0287E1B8D00DB700D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +60,6 @@
 			children = (
 				52CF498B287E1B8B00DB700D /* Persomi */,
 				52CF499C287E1B8D00DB700D /* PersomiTests */,
-				52CF49A6287E1B8D00DB700D /* PersomiUITests */,
 				52CF498A287E1B8B00DB700D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +69,6 @@
 			children = (
 				52CF4989287E1B8B00DB700D /* Persomi.app */,
 				52CF4999287E1B8D00DB700D /* PersomiTests.xctest */,
-				52CF49A3287E1B8D00DB700D /* PersomiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +76,10 @@
 		52CF498B287E1B8B00DB700D /* Persomi */ = {
 			isa = PBXGroup;
 			children = (
+				52CF49E8287E1FEB00DB700D /* Info.plist */,
+				52CF49E3287E1E2000DB700D /* Screens */,
+				52CF49E2287E1E0E00DB700D /* Helpers */,
 				52CF498C287E1B8B00DB700D /* PersomiApp.swift */,
-				52CF498E287E1B8B00DB700D /* ContentView.swift */,
 				52CF4990287E1B8D00DB700D /* Assets.xcassets */,
 				52CF4992287E1B8D00DB700D /* Preview Content */,
 			);
@@ -118,13 +102,20 @@
 			path = PersomiTests;
 			sourceTree = "<group>";
 		};
-		52CF49A6287E1B8D00DB700D /* PersomiUITests */ = {
+		52CF49E2287E1E0E00DB700D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				52CF49A7287E1B8D00DB700D /* PersomiUITests.swift */,
-				52CF49A9287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift */,
 			);
-			path = PersomiUITests;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		52CF49E3287E1E2000DB700D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				52CF49E9287E250900DB700D /* LaunchScreen.storyboard */,
+				52CF49EB287EA5C600DB700D /* IntroScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +156,6 @@
 			productReference = 52CF4999287E1B8D00DB700D /* PersomiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		52CF49A2287E1B8D00DB700D /* PersomiUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52CF49B3287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "PersomiUITests" */;
-			buildPhases = (
-				52CF499F287E1B8D00DB700D /* Sources */,
-				52CF49A0287E1B8D00DB700D /* Frameworks */,
-				52CF49A1287E1B8D00DB700D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52CF49A5287E1B8D00DB700D /* PBXTargetDependency */,
-			);
-			name = PersomiUITests;
-			productName = PersomiUITests;
-			productReference = 52CF49A3287E1B8D00DB700D /* PersomiUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +170,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					52CF4998287E1B8D00DB700D = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 52CF4988287E1B8B00DB700D;
-					};
-					52CF49A2287E1B8D00DB700D = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 52CF4988287E1B8B00DB700D;
 					};
@@ -221,7 +190,6 @@
 			targets = (
 				52CF4988287E1B8B00DB700D /* Persomi */,
 				52CF4998287E1B8D00DB700D /* PersomiTests */,
-				52CF49A2287E1B8D00DB700D /* PersomiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,19 +199,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CF49EA287E250900DB700D /* LaunchScreen.storyboard in Resources */,
 				52CF4994287E1B8D00DB700D /* Preview Assets.xcassets in Resources */,
 				52CF4991287E1B8D00DB700D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		52CF4997287E1B8D00DB700D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52CF49A1287E1B8D00DB700D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52CF498F287E1B8B00DB700D /* ContentView.swift in Sources */,
+				52CF49EC287EA5C600DB700D /* IntroScreen.swift in Sources */,
 				52CF498D287E1B8B00DB700D /* PersomiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,15 +232,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52CF499F287E1B8D00DB700D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52CF49AA287E1B8D00DB700D /* PersomiUITestsLaunchTests.swift in Sources */,
-				52CF49A8287E1B8D00DB700D /* PersomiUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +239,6 @@
 			isa = PBXTargetDependency;
 			target = 52CF4988287E1B8B00DB700D /* Persomi */;
 			targetProxy = 52CF499A287E1B8D00DB700D /* PBXContainerItemProxy */;
-		};
-		52CF49A5287E1B8D00DB700D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52CF4988287E1B8B00DB700D /* Persomi */;
-			targetProxy = 52CF49A4287E1B8D00DB700D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,9 +370,10 @@
 				DEVELOPMENT_TEAM = 35Y7TCQ45E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Persomi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,9 +400,10 @@
 				DEVELOPMENT_TEAM = 35Y7TCQ45E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Persomi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,42 +459,6 @@
 			};
 			name = Release;
 		};
-		52CF49B4287E1B8D00DB700D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35Y7TCQ45E;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abu.PersomiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Persomi;
-			};
-			name = Debug;
-		};
-		52CF49B5287E1B8D00DB700D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35Y7TCQ45E;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abu.PersomiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Persomi;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -571,15 +485,6 @@
 			buildConfigurations = (
 				52CF49B1287E1B8D00DB700D /* Debug */,
 				52CF49B2287E1B8D00DB700D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52CF49B3287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "PersomiUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52CF49B4287E1B8D00DB700D /* Debug */,
-				52CF49B5287E1B8D00DB700D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
