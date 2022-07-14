@@ -50,20 +50,8 @@ struct HomeScreen: View {
             }
         }
         .safeAreaInset(edge: .top) {
-            ProgressBar(value: 0.2)
+            ProgressBar(currentQuestion: currentIndex, totalQuestions: persoVM.totalQuestions())
         }
-//        .safeAreaInset(edge: .bottom) {
-//            Button  {
-//                print("Next")
-//            } label: {
-//                Text("Next Question  →")
-//                    .font(.headline)
-//                    .frame(maxWidth: .infinity, maxHeight: 60)
-//                    .background(Color.accentColor)
-//                    .foregroundColor(.white)
-//            }
-//            .background(Color.accentColor)
-//        }
     }
 }
 

@@ -31,6 +31,10 @@ class PersoViewModel : ObservableObject {
         (quiz?.questions[index].answers) ?? []
     }
     
+    func totalQuestions() -> Int {
+        (quiz?.questions.count) ?? 0
+    }
+    
     func saveUserResponse(_ questionIndex: Int, _ choiceIndex: Int) {
         userResponse.append((quiz?.questions[questionIndex].scores[choiceIndex]) ?? 0)
     }
