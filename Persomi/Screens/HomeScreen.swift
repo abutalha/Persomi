@@ -7,45 +7,27 @@
 
 import SwiftUI
 
-let PROGRESSBAR_HEIGHT = 10.0
-
-struct ProgressBar: View {
-    var value: Float
-    var body: some View {
-        GeometryReader { geo in
-            VStack (alignment: .leading) {
-                Text ("2").font(.title3) +
-                Text (" of 14").font(.subheadline).foregroundColor(.secondary)
-                ZStack (alignment: .leading) {
-                    Rectangle().fill(Color.accentColor.opacity(0.15)).cornerRadius(PROGRESSBAR_HEIGHT/2)
-                        .frame(maxWidth: geo.size.width, maxHeight: PROGRESSBAR_HEIGHT)
-                    Rectangle().fill(Color.accentColor).cornerRadius(PROGRESSBAR_HEIGHT/2)
-                        .frame(maxWidth: geo.size.width * CGFloat(value),
-                               maxHeight: PROGRESSBAR_HEIGHT)
-                }
-            }.padding()
-        }
-    }
-}
-
 struct HomeScreen: View {
+    @StateObject var persoVM = PersoViewModel()
+    @State var currentIndex: Int = 0
+    
     var body: some View {
         NavigationView {
             VStack (alignment: .leading) {
                 Spacer()
-                Text("You’re really busy at work and a colleague is telling you their life story and personal woes.")
+                Text(persoVM.question(currentIndex))
                     .font(.title3)
                     .padding(.horizontal, 30)
                 Spacer()
                 Group {
-                    ForEach (1..<5) { index in
+                    ForEach (persoVM.answers(currentIndex), id:\.self) { answer in
                         Button  {
-                            
                         } label: {
                             HStack {
                                 Image(systemName: "circle")
                                     .foregroundColor(.secondary)
-                                Text("Option is big tested now with more options \(index)")
+                                Text(answer)
+                                    .foregroundColor(Color(.label))
                                     .multilineTextAlignment(.leading)
                             }
                             .frame(maxWidth: .infinity, maxHeight: 44, alignment: .leading)

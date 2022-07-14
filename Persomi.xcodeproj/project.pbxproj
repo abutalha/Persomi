@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410236CF4A3935ED825170B4 /* Pods_PersomiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A1FF90C007E6EBCBFC12D5 /* Pods_PersomiTests.framework */; };
 		52CF498D287E1B8B00DB700D /* PersomiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF498C287E1B8B00DB700D /* PersomiApp.swift */; };
 		52CF4991287E1B8D00DB700D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CF4990287E1B8D00DB700D /* Assets.xcassets */; };
-		52CF4994287E1B8D00DB700D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */; };
 		52CF499E287E1B8D00DB700D /* PersomiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF499D287E1B8D00DB700D /* PersomiTests.swift */; };
 		52CF49EA287E250900DB700D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CF49E9287E250900DB700D /* LaunchScreen.storyboard */; };
 		52CF49EC287EA5C600DB700D /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49EB287EA5C600DB700D /* IntroScreen.swift */; };
 		52CF49EE287EBCE600DB700D /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49ED287EBCE600DB700D /* HomeScreen.swift */; };
+		52CF49F1287EE1C800DB700D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49F0287EE1C800DB700D /* ProgressBar.swift */; };
+		52CF49F5287EE44600DB700D /* PersoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49F4287EE44600DB700D /* PersoViewModel.swift */; };
+		52CF49F8287EE4E500DB700D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49F7287EE4E500DB700D /* Question.swift */; };
+		52CF49FB288023D400DB700D /* QuizRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF49FA288023D400DB700D /* QuizRepo.swift */; };
+		52CF49FD2880AF2500DB700D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52CF49FC2880AF2400DB700D /* GoogleService-Info.plist */; };
+		A7B51D8B4B347B91FEFAE5C0 /* Pods_Persomi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935B77E4E6AB95D2AED921F7 /* Pods_Persomi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,16 +33,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23C863382B95D4D2B5981131 /* Pods-Persomi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persomi.debug.xcconfig"; path = "Target Support Files/Pods-Persomi/Pods-Persomi.debug.xcconfig"; sourceTree = "<group>"; };
+		3BF32A24FFE7DA952134F852 /* Pods-PersomiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersomiTests.debug.xcconfig"; path = "Target Support Files/Pods-PersomiTests/Pods-PersomiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		52CF4989287E1B8B00DB700D /* Persomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CF498C287E1B8B00DB700D /* PersomiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiApp.swift; sourceTree = "<group>"; };
 		52CF4990287E1B8D00DB700D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52CF4999287E1B8D00DB700D /* PersomiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CF499D287E1B8D00DB700D /* PersomiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersomiTests.swift; sourceTree = "<group>"; };
 		52CF49E8287E1FEB00DB700D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		52CF49E9287E250900DB700D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52CF49EB287EA5C600DB700D /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		52CF49ED287EBCE600DB700D /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		52CF49F0287EE1C800DB700D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		52CF49F4287EE44600DB700D /* PersoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoViewModel.swift; sourceTree = "<group>"; };
+		52CF49F7287EE4E500DB700D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		52CF49FA288023D400DB700D /* QuizRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepo.swift; sourceTree = "<group>"; };
+		52CF49FC2880AF2400DB700D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		55B757F021CA24431E1D6EF2 /* Pods-Persomi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persomi.release.xcconfig"; path = "Target Support Files/Pods-Persomi/Pods-Persomi.release.xcconfig"; sourceTree = "<group>"; };
+		60A1FF90C007E6EBCBFC12D5 /* Pods_PersomiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersomiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		935B77E4E6AB95D2AED921F7 /* Pods_Persomi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Persomi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9AAE93EF6C1BA1594D852DD /* Pods-PersomiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersomiTests.release.xcconfig"; path = "Target Support Files/Pods-PersomiTests/Pods-PersomiTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B51D8B4B347B91FEFAE5C0 /* Pods_Persomi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410236CF4A3935ED825170B4 /* Pods_PersomiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +81,8 @@
 				52CF498B287E1B8B00DB700D /* Persomi */,
 				52CF499C287E1B8D00DB700D /* PersomiTests */,
 				52CF498A287E1B8B00DB700D /* Products */,
+				DE024417BA687042AFA9AADB /* Pods */,
+				C939EB02551D2B293E0B9E7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,22 +98,14 @@
 		52CF498B287E1B8B00DB700D /* Persomi */ = {
 			isa = PBXGroup;
 			children = (
-				52CF49E8287E1FEB00DB700D /* Info.plist */,
+				52CF49F92880239300DB700D /* Repositories */,
+				52CF49F6287EE49000DB700D /* Model */,
+				52CF49F2287EE25400DB700D /* ViewModel */,
 				52CF49E3287E1E2000DB700D /* Screens */,
 				52CF49E2287E1E0E00DB700D /* Helpers */,
-				52CF498C287E1B8B00DB700D /* PersomiApp.swift */,
-				52CF4990287E1B8D00DB700D /* Assets.xcassets */,
-				52CF4992287E1B8D00DB700D /* Preview Content */,
+				52CF49F3287EE27A00DB700D /* AppEntry */,
 			);
 			path = Persomi;
-			sourceTree = "<group>";
-		};
-		52CF4992287E1B8D00DB700D /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				52CF4993287E1B8D00DB700D /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		52CF499C287E1B8D00DB700D /* PersomiTests */ = {
@@ -114,11 +126,75 @@
 		52CF49E3287E1E2000DB700D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				52CF49EF287EE1B600DB700D /* Views */,
 				52CF49ED287EBCE600DB700D /* HomeScreen.swift */,
 				52CF49E9287E250900DB700D /* LaunchScreen.storyboard */,
 				52CF49EB287EA5C600DB700D /* IntroScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		52CF49EF287EE1B600DB700D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52CF49F0287EE1C800DB700D /* ProgressBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52CF49F2287EE25400DB700D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52CF49F4287EE44600DB700D /* PersoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52CF49F3287EE27A00DB700D /* AppEntry */ = {
+			isa = PBXGroup;
+			children = (
+				52CF49FC2880AF2400DB700D /* GoogleService-Info.plist */,
+				52CF49E8287E1FEB00DB700D /* Info.plist */,
+				52CF4990287E1B8D00DB700D /* Assets.xcassets */,
+				52CF498C287E1B8B00DB700D /* PersomiApp.swift */,
+			);
+			name = AppEntry;
+			sourceTree = "<group>";
+		};
+		52CF49F6287EE49000DB700D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52CF49F7287EE4E500DB700D /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52CF49F92880239300DB700D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				52CF49FA288023D400DB700D /* QuizRepo.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C939EB02551D2B293E0B9E7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				935B77E4E6AB95D2AED921F7 /* Pods_Persomi.framework */,
+				60A1FF90C007E6EBCBFC12D5 /* Pods_PersomiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE024417BA687042AFA9AADB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23C863382B95D4D2B5981131 /* Pods-Persomi.debug.xcconfig */,
+				55B757F021CA24431E1D6EF2 /* Pods-Persomi.release.xcconfig */,
+				3BF32A24FFE7DA952134F852 /* Pods-PersomiTests.debug.xcconfig */,
+				D9AAE93EF6C1BA1594D852DD /* Pods-PersomiTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52CF49AD287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "Persomi" */;
 			buildPhases = (
+				D1FDE5893E72D6C289C90D05 /* [CP] Check Pods Manifest.lock */,
 				52CF4985287E1B8B00DB700D /* Sources */,
 				52CF4986287E1B8B00DB700D /* Frameworks */,
 				52CF4987287E1B8B00DB700D /* Resources */,
+				D9EE7DC53CAF33DA7A262D08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52CF49B0287E1B8D00DB700D /* Build configuration list for PBXNativeTarget "PersomiTests" */;
 			buildPhases = (
+				D1D345A2A0575ADAC67E4644 /* [CP] Check Pods Manifest.lock */,
 				52CF4995287E1B8D00DB700D /* Sources */,
 				52CF4996287E1B8D00DB700D /* Frameworks */,
 				52CF4997287E1B8D00DB700D /* Resources */,
@@ -203,8 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CF49EA287E250900DB700D /* LaunchScreen.storyboard in Resources */,
-				52CF4994287E1B8D00DB700D /* Preview Assets.xcassets in Resources */,
 				52CF4991287E1B8D00DB700D /* Assets.xcassets in Resources */,
+				52CF49FD2880AF2500DB700D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +296,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D1D345A2A0575ADAC67E4644 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersomiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1FDE5893E72D6C289C90D05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Persomi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9EE7DC53CAF33DA7A262D08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Persomi/Pods-Persomi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Persomi/Pods-Persomi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Persomi/Pods-Persomi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52CF4985287E1B8B00DB700D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,6 +367,10 @@
 			files = (
 				52CF49EC287EA5C600DB700D /* IntroScreen.swift in Sources */,
 				52CF498D287E1B8B00DB700D /* PersomiApp.swift in Sources */,
+				52CF49FB288023D400DB700D /* QuizRepo.swift in Sources */,
+				52CF49F1287EE1C800DB700D /* ProgressBar.swift in Sources */,
+				52CF49F8287EE4E500DB700D /* Question.swift in Sources */,
+				52CF49F5287EE44600DB700D /* PersoViewModel.swift in Sources */,
 				52CF49EE287EBCE600DB700D /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,12 +512,13 @@
 		};
 		52CF49AE287E1B8D00DB700D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C863382B95D4D2B5981131 /* Pods-Persomi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Persomi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 35Y7TCQ45E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -395,12 +543,13 @@
 		};
 		52CF49AF287E1B8D00DB700D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55B757F021CA24431E1D6EF2 /* Pods-Persomi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Persomi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 35Y7TCQ45E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -425,6 +574,7 @@
 		};
 		52CF49B1287E1B8D00DB700D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF32A24FFE7DA952134F852 /* Pods-PersomiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -445,6 +595,7 @@
 		};
 		52CF49B2287E1B8D00DB700D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AAE93EF6C1BA1594D852DD /* Pods-PersomiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
