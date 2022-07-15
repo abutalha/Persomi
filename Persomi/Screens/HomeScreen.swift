@@ -38,7 +38,7 @@ struct HomeScreen: View {
                         }
                         Button  {
                             withAnimation {
-                                persoVM.saveUserResponse(2)
+                                persoVM.moveToNextQuestion()
                             }
                         } label: {
                             Text(persoVM.isLastQuestion() ? "Submit" : "Next Question  →")
@@ -60,42 +60,10 @@ struct HomeScreen: View {
                 ProgressBar(currentQuestion: $persoVM.currentIndex, totalQuestions: persoVM.totalQuestions())
             }
         }
+        .fullScreenCover(isPresented: $persoVM.showResult) {
+            ResultScreen()
+                .environmentObject(persoVM)
+        }
     }
 }
 
-struct QuestionView : View {
-    @EnvironmentObject var persoVM: PersoViewModel
-    var question: Question
-    @State var selectedAnswer:UUID?
-    
-    var body: some View {
-        VStack (alignment: .leading)  {
-            Spacer()
-            Text(question.question)
-                .font(.title3)
-            Spacer()
-            VStack (spacing: 8) { //(selection: $selectedAnswer) {
-                ForEach (question.answers.indices, id:\.self) { index in
-                    Button  {
-                        print ("button index: \(index)")
-                    } label: {
-                        HStack {
-                            Image(systemName: "circle")
-                                .foregroundColor(.secondary)
-                            Text(question.answers[index])
-                                .font(.subheadline)
-                                .padding(.vertical)
-                                .foregroundColor(Color(.label))
-                                .multilineTextAlignment(.leading)
-                        }
-                        .padding(.horizontal)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(Color.accentColor.opacity(0.1))
-                        .cornerRadius(10)
-                    }
-                }
-            }
-        }
-        .padding(.horizontal, 30)
-    }
-}

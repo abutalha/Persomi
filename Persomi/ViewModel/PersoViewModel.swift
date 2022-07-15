@@ -10,15 +10,19 @@ import Combine
 
 @MainActor
 class PersoViewModel : ObservableObject {
-    private var quizRepo = QuizRepo()
-    @Published var quiz = Quiz()
-    @Published var currentIndex: Int = 0
-    private var bag = Set<AnyCancellable>()
 
     // mapping the score for each question
     private var result: [Int:Int] = [:]
+    private var totalScore = 0
+    private var bag = Set<AnyCancellable>()
+    private var quizRepo = QuizRepo()
 
+    @Published var quiz = Quiz()
+    @Published var currentIndex: Int = 0
+    @Published var showResult = false
+    
     init() {
+        // sync any changes from Repository to this viewmodel
         quizRepo.$quiz
             .sink { quiz in
                 self.quiz = quiz
@@ -50,13 +54,13 @@ class PersoViewModel : ObservableObject {
     }
     
     func saveUserResponse(_ choiceIndex: Int) {
-        result[currentIndex] = quiz.questions[currentIndex].scores[choiceIndex]
-        moveToNextQuestion()
+        result[currentIndex] = choiceIndex
     }
     
     func moveToNextQuestion() {
         if isLastQuestion() {
-           // show results
+            totalScore = result.compactMap { quiz.questions[currentIndex].scores[$0.value] }.reduce(0, +)
+            showResult.toggle()
         } else {
             currentIndex += 1
         }
@@ -68,6 +72,10 @@ class PersoViewModel : ObservableObject {
         }
     }
     
+    func isSelected(_ index: Int) -> Bool {
+        result[currentIndex] == index
+    }
+    
     func isFirstQuestion() -> Bool {
         currentIndex == 0
     }
@@ -76,13 +84,18 @@ class PersoViewModel : ObservableObject {
         (currentIndex + 1) == quiz.questions.count
     }
     
-    func getResult() -> (String, String) {
-        let totalScore = result.compactMap { $0.value }.reduce(0, +)
-            
-        if (totalScore < 5) {
-            return ("Introvert", quiz.aboutIntro)
-        } else {
-            return ("Extrovert", quiz.aboutExtro)
-        }
+    func getPersonalityTitle() -> String {
+        totalScore < 5 ? "Introvert" : "Extrovert"
+    }
+    
+    func getPersonalityTrait() -> String {
+        totalScore < 5 ? quiz.aboutIntro : quiz.aboutExtro
+    }
+    
+    func reset() {
+        currentIndex = 0
+        totalScore = 0
+        result = [:]
+        showResult = false
     }
 }
