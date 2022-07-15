@@ -10,11 +10,11 @@ import SwiftUI
 let PROGRESSBAR_HEIGHT = 10.0
 
 struct ProgressBar: View {
-    var currentQuestion: Int
+    @Binding var currentQuestion: Int
     var totalQuestions: Int
     
     private var value: CGFloat {
-        return CGFloat(totalQuestions / (currentQuestion + 1))
+        return CGFloat(currentQuestion + 1) / CGFloat(totalQuestions)
     }
     
     var body: some View {
@@ -38,6 +38,6 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar(currentQuestion: 1, totalQuestions: 1)
+        ProgressBar(currentQuestion: .constant(1), totalQuestions: 1)
     }
 }

@@ -12,9 +12,11 @@ import Combine
 class PersoViewModel : ObservableObject {
     private var quizRepo = QuizRepo()
     @Published var quiz = Quiz()
-    @Published var userResponse: [Int] = []
-    //@Published var currentIndex: Int = 0
+    @Published var currentIndex: Int = 0
     private var bag = Set<AnyCancellable>()
+
+    // mapping the score for each question
+    private var result: [Int:Int] = [:]
 
     init() {
         quizRepo.$quiz
@@ -47,18 +49,36 @@ class PersoViewModel : ObservableObject {
         quiz.questions.count
     }
     
-    func saveUserResponse(_ questionIndex: Int, _ choiceIndex: Int) {
-        userResponse.append(quiz.questions[questionIndex].scores[choiceIndex])
+    func saveUserResponse(_ choiceIndex: Int) {
+        result[currentIndex] = quiz.questions[currentIndex].scores[choiceIndex]
+        moveToNextQuestion()
     }
     
-    func isFirstQuestion(_ index: Int) -> Bool {
-        print (totalQuestions())
-        return (index + 1) < totalQuestions()
+    func moveToNextQuestion() {
+        if isLastQuestion() {
+           // show results
+        } else {
+            currentIndex += 1
+        }
+    }
+
+    func moveToPreviousQuestion() {
+        if !isFirstQuestion() {
+            currentIndex -= 1
+        }
+    }
+    
+    func isFirstQuestion() -> Bool {
+        currentIndex == 0
+    }
+
+    func isLastQuestion() -> Bool {
+        (currentIndex + 1) == quiz.questions.count
     }
     
     func getResult() -> (String, String) {
-        let totalScore = userResponse.reduce(0, +)
-         
+        let totalScore = result.compactMap { $0.value }.reduce(0, +)
+            
         if (totalScore < 5) {
             return ("Introvert", quiz.aboutIntro)
         } else {

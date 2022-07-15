@@ -9,25 +9,25 @@ import SwiftUI
 
 struct HomeScreen: View {
     @EnvironmentObject var persoVM: PersoViewModel
-    @State var currentIndex: Int = 0
-//    @Binding var choiceIndex: Int
-    
     var body: some View {
         NavigationView {
             if persoVM.allQuestions().count > 0 {
                 VStack {
-                    TabView (selection: $currentIndex) {
+                    TabView (selection: $persoVM.currentIndex) {
                         ForEach(persoVM.allQuestions().indices, id:\.self) { index in
                             QuestionView(question: persoVM.question(index))
+                                .environmentObject(persoVM)
                                 .tag(index)
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .never))
                     
                     HStack (spacing: 0) {
-                        if (currentIndex > 0) {
+                        if (!persoVM.isFirstQuestion()) {
                             Button  {
-                                print("Previous")
+                                withAnimation {
+                                    persoVM.moveToPreviousQuestion()
+                                }
                             } label: {
                                 Text("Previous")
                                     .font(.headline)
@@ -37,9 +37,11 @@ struct HomeScreen: View {
                             }
                         }
                         Button  {
-                            persoVM.saveUserResponse(currentIndex, 2)
+                            withAnimation {
+                                persoVM.saveUserResponse(2)
+                            }
                         } label: {
-                            Text((currentIndex > 0) ? "Next Question  →" : "Submit")
+                            Text(persoVM.isLastQuestion() ? "Submit" : "Next Question  →")
                                 .font(.headline)
                                 .frame(maxWidth: .infinity, maxHeight: 60)
                                 .background(Color.accentColor)
@@ -54,13 +56,15 @@ struct HomeScreen: View {
             }
         }
         .safeAreaInset(edge: .top) {
-            ProgressBar(currentQuestion: currentIndex, totalQuestions: persoVM.totalQuestions())
+            if persoVM.allQuestions().count > 0 {
+                ProgressBar(currentQuestion: $persoVM.currentIndex, totalQuestions: persoVM.totalQuestions())
+            }
         }
     }
 }
 
 struct QuestionView : View {
-    
+    @EnvironmentObject var persoVM: PersoViewModel
     var question: Question
     @State var selectedAnswer:UUID?
     
@@ -70,40 +74,28 @@ struct QuestionView : View {
             Text(question.question)
                 .font(.title3)
             Spacer()
-            List(selection: $selectedAnswer) {
-                ForEach (question.answers, id:\.self) { answer in
-                    Label {
-                        Text(answer)
-                            .foregroundColor(Color(.label))
-                            .multilineTextAlignment(.leading)
-                    } icon: {
-                        Image(systemName: "circle")
-                            .foregroundColor(.secondary)
+            VStack (spacing: 8) { //(selection: $selectedAnswer) {
+                ForEach (question.answers.indices, id:\.self) { index in
+                    Button  {
+                        print ("button index: \(index)")
+                    } label: {
+                        HStack {
+                            Image(systemName: "circle")
+                                .foregroundColor(.secondary)
+                            Text(question.answers[index])
+                                .font(.subheadline)
+                                .padding(.vertical)
+                                .foregroundColor(Color(.label))
+                                .multilineTextAlignment(.leading)
+                        }
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.accentColor.opacity(0.1))
+                        .cornerRadius(10)
                     }
-                    //.frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
         }
         .padding(.horizontal, 30)
-        //                    Button  {
-        //                    } label: {
-        //                        HStack {
-        //                            Image(systemName: "circle")
-        //                                .foregroundColor(.secondary)
-        //                            Text(answer)
-        //                                .foregroundColor(Color(.label))
-        //                                .multilineTextAlignment(.leading)
-        //                        }
-        //                        .frame(maxWidth: .infinity, maxHeight: 44, alignment: .leading)
-        //                    }
-        //                }
-        //            }
-        //        }.padding(.horizontal, 30)
     }
 }
-
-//struct HomeScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//HomeScreen()
-//    }
-//}
