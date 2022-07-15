@@ -20,11 +20,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct PersomiApp: App {
 
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject var persoVM = PersoViewModel()
     
     var body: some Scene {
         WindowGroup {
 //            IntroScreen()
             HomeScreen()
+                .environmentObject(persoVM)
         }
     }
 }

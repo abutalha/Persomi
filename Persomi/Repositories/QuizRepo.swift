@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 
 class QuizRepo : ObservableObject {
     private var db = Firestore.firestore()
-    @Published var quiz: Quiz?
+    @Published var quiz = Quiz()
     
     init() {
         fetchData()

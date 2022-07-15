@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct Question : Codable {
+struct Question : Hashable, Codable {
     var id: String? = UUID().uuidString
     var question: String = ""
     var answers: [String] = []
@@ -17,7 +17,7 @@ struct Question : Codable {
 
 struct Quiz : Codable {
     @DocumentID var id: String?
-    var questions: [Question]
-    var aboutIntro: String
-    var aboutExtro: String
+    var questions: [Question] = []
+    var aboutIntro: String = ""
+    var aboutExtro: String = ""
 }

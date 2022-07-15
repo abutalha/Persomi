@@ -153,10 +153,10 @@
 		52CF49F3287EE27A00DB700D /* AppEntry */ = {
 			isa = PBXGroup;
 			children = (
+				52CF498C287E1B8B00DB700D /* PersomiApp.swift */,
 				52CF49FC2880AF2400DB700D /* GoogleService-Info.plist */,
 				52CF49E8287E1FEB00DB700D /* Info.plist */,
 				52CF4990287E1B8D00DB700D /* Assets.xcassets */,
-				52CF498C287E1B8B00DB700D /* PersomiApp.swift */,
 			);
 			name = AppEntry;
 			sourceTree = "<group>";
