@@ -28,11 +28,19 @@ struct ResultScreen: View {
                     .font(.title3)
             }
             Spacer()
-            Button("Restart", role: .destructive) {
-                persoVM.reset()
-                presentationMode.wrappedValue.dismiss()
+            HStack (spacing: 20) {
+                Button("Show my answers") {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .buttonStyle(.bordered)
+
+                Button("Restart", role: .destructive) {
+                    persoVM.reset()
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .buttonStyle(.borderedProminent)
+
             }.padding(.top, 16)
-            .buttonStyle(.borderedProminent)
         }.padding(30)
     }
 }
