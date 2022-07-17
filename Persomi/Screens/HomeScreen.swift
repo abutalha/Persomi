@@ -18,6 +18,7 @@ struct HomeScreen: View {
                             QuestionView(question: persoVM.question(index))
                                 .environmentObject(persoVM)
                                 .tag(index)
+                                .id(persoVM.viewId)
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .never))

@@ -14,14 +14,15 @@ struct ResultScreen: View {
     var details: String = "..."
     
     var body: some View {
-        VStack (spacing: 30) {
+        VStack {
             Image("LaunchScreen", bundle: nil)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 70, height: 70)
+                .frame(width: 50, height: 50)
                 .foregroundColor(.accentColor).opacity(0.75)
             Text(persoVM.getPersonalityTitle()).bold()
-                .font(.largeTitle)
+                .font(.title)
+                .multilineTextAlignment(.center)
             ScrollView {
                 Text(persoVM.getPersonalityTrait())
                     .font(.title3)
@@ -30,7 +31,7 @@ struct ResultScreen: View {
             Button("Restart", role: .destructive) {
                 persoVM.reset()
                 presentationMode.wrappedValue.dismiss()
-            }
+            }.padding(.top, 16)
             .buttonStyle(.borderedProminent)
         }.padding(30)
     }

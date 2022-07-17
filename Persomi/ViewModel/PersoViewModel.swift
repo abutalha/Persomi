@@ -21,7 +21,8 @@ class PersoViewModel : ObservableObject {
     @Published var quiz = Quiz()
     @Published var currentIndex: Int = 0
     @Published var showResult = false
-
+    @Published var viewId = 0
+    
     init() {
         // sync any changes from Repository to this viewmodel
         quizRepo.$quiz
@@ -94,7 +95,7 @@ class PersoViewModel : ObservableObject {
     }
     
     func getPersonalityTitle() -> String {
-        totalScore < 5 ? "Introvert" : "Extrovert"
+       "You are more of an \(totalScore < (5 * quiz.questions.count) ? "Introvert" : "Extrovert")"
     }
     
     func getPersonalityTrait() -> String {
@@ -106,5 +107,8 @@ class PersoViewModel : ObservableObject {
         totalScore = 0
         result.removeAll()
         showResult = false
+        
+        // small hack to force QuestionView to redraw so the state variables will be reset when the quiz start over.
+        viewId = viewId >= Int.max ? 0 : viewId + 1
     }
 }
