@@ -10,15 +10,16 @@ import SwiftUI
 struct QuestionView : View {
     @EnvironmentObject var persoVM: PersoViewModel
     var question: Question
-    @State var selectedOption = 0
+    @State var selectedOption = -1
     
     var body: some View {
         VStack (alignment: .leading)  {
             Spacer()
             Text(question.question)
-                .font(.title3)
+                .font(.title2)
+                
             Spacer()
-            VStack (spacing: 8) { //(selection: $selectedAnswer) {
+            VStack (spacing: 8) {
                 ForEach (question.answers.indices, id:\.self) { index in
                     Button  {
                         print ("button index: \(index)")
@@ -29,10 +30,10 @@ struct QuestionView : View {
                     } label: {
                         HStack {
                             Image(systemName: selectedOption == index ?  "checkmark.circle.fill" : "circle")
-                                .foregroundColor(selectedOption == index ? .green : .secondary)
+                                .foregroundColor(selectedOption == index ? .purple : .secondary)
                             Text(question.answers[index])
                                 .font(.subheadline)
-                                .fontWeight(selectedOption == index ? .semibold : .regular)
+                                .fontWeight(selectedOption == index ? .medium : .regular)
                                 .padding(.vertical)
                                 .foregroundColor(Color(.label))
                                 .multilineTextAlignment(.leading)
@@ -43,7 +44,7 @@ struct QuestionView : View {
                         .cornerRadius(10)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(selectedOption == index ? Color.green : Color.clear, lineWidth: 2)
+                                    .stroke(selectedOption == index ? Color.purple : Color.clear, lineWidth: 2)
                             )
                     }
                 }

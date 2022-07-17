@@ -29,9 +29,9 @@ struct HomeScreen: View {
                                     persoVM.moveToPreviousQuestion()
                                 }
                             } label: {
-                                Text("Previous")
-                                    .font(.headline)
-                                    .frame(maxWidth: 120, maxHeight: 60)
+                                Text(" ⇠ ")
+                                    .font(.largeTitle)
+                                    .frame(maxWidth: 100, maxHeight: 60)
                                     .background(Color.accentColor.opacity(0.2))
                                     .foregroundColor(Color.accentColor)
                             }
@@ -46,6 +46,7 @@ struct HomeScreen: View {
                                 .frame(maxWidth: .infinity, maxHeight: 60)
                                 .background(Color.accentColor)
                                 .foregroundColor(.white)
+                            
                         }
                     }
                     .padding(.top, 30)

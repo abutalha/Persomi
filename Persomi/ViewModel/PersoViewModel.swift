@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 @MainActor
 class PersoViewModel : ObservableObject {
@@ -16,11 +17,11 @@ class PersoViewModel : ObservableObject {
     private var totalScore = 0
     private var bag = Set<AnyCancellable>()
     private var quizRepo = QuizRepo()
-
+    
     @Published var quiz = Quiz()
     @Published var currentIndex: Int = 0
     @Published var showResult = false
-    
+
     init() {
         // sync any changes from Repository to this viewmodel
         quizRepo.$quiz
@@ -45,21 +46,29 @@ class PersoViewModel : ObservableObject {
         quiz.questions[index].answers
     }
     
-    func submitAnswer(_ choiceIndex: Int) {
-        
-    }
-    
     func totalQuestions() -> Int {
         quiz.questions.count
     }
     
     func saveUserResponse(_ choiceIndex: Int) {
         result[currentIndex] = choiceIndex
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
     
     func moveToNextQuestion() {
         if isLastQuestion() {
-            totalScore = result.compactMap { quiz.questions[currentIndex].scores[$0.value] }.reduce(0, +)
+            
+            // find any question skipped question and scroll to it before allowing them to view results
+            for index in 0..<quiz.questions.count {
+                if !result.keys.contains(index) {
+                    currentIndex = index
+                    return
+                }
+            }
+            
+            // calculate total score based on their choices
+            totalScore = result.compactMap { quiz.questions[currentIndex].scores[$0.value]
+            }.reduce(0, +)
             showResult.toggle()
         } else {
             currentIndex += 1
@@ -95,7 +104,7 @@ class PersoViewModel : ObservableObject {
     func reset() {
         currentIndex = 0
         totalScore = 0
-        result = [:]
+        result.removeAll()
         showResult = false
     }
 }
