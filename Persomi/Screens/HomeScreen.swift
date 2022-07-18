@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @EnvironmentObject var persoVM: PersoViewModel
+    @StateObject var persoVM: PersoViewModel
+    @AppStorage("showIntro") var showIntro: Bool = true
+    
+    init(quizDataService: QuizDataProtocol) {
+        _persoVM = StateObject(wrappedValue: PersoViewModel(dataService: quizDataService))
+    }
+    
     var body: some View {
         NavigationView {
             if persoVM.allQuestions().count > 0 {
@@ -65,6 +71,9 @@ struct HomeScreen: View {
         .fullScreenCover(isPresented: $persoVM.showResult) {
             ResultScreen()
                 .environmentObject(persoVM)
+        }
+        .fullScreenCover(isPresented: $showIntro) {
+            IntroScreen()
         }
     }
 }

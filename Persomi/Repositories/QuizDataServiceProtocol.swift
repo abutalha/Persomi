@@ -9,15 +9,16 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class QuizRepo : ObservableObject {
+typealias ResponseHandler = (Quiz)->Void
+
+protocol QuizDataProtocol {
+    func fetchData(completion: @escaping ResponseHandler)
+}
+
+final class QuizDataService : QuizDataProtocol {
     private var db = Firestore.firestore()
-    @Published var quiz = Quiz()
-    
-    init() {
-        fetchData()
-    }
-    
-    func fetchData() {
+
+    func fetchData(completion: @escaping ResponseHandler) {
         db.collection("quiz").addSnapshotListener { snapshot, error in
             if let error = error {
                 print("Error reading data from server: \(error.localizedDescription)")
@@ -30,7 +31,9 @@ class QuizRepo : ObservableObject {
             
             do {
                 if let result = try docs.first?.data(as: Quiz.self) {
-                    self.quiz = result
+                    completion(result)
+//                    self.quiz = result
+                    print ("Repo: \(result.questions.count)")
                 }
             } catch {
                 print ("Error: \(error.localizedDescription)")

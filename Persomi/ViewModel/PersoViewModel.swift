@@ -6,30 +6,26 @@
 //
 
 import Foundation
-import Combine
 import UIKit
 
-@MainActor
 class PersoViewModel : ObservableObject {
 
     // mapping the score for each question
     private var result: [Int:Int] = [:]
     private var totalScore = 0
-    private var bag = Set<AnyCancellable>()
-    private var quizRepo = QuizRepo()
+    private var quizDataService: QuizDataProtocol!
     
     @Published var quiz = Quiz()
     @Published var currentIndex: Int = 0
     @Published var showResult = false
     @Published var viewId = 0
     
-    init() {
-        // sync any changes from Repository to this viewmodel
-        quizRepo.$quiz
-            .sink { quiz in
-                self.quiz = quiz
-            }
-            .store(in: &bag)
+    init(dataService: QuizDataProtocol) {
+        self.quizDataService = dataService
+        quizDataService.fetchData { [weak self] result in
+            self!.quiz = result
+//            print ("Count: \(self?.quiz.questions.count)")
+        }
     }
     
     func allQuestions() -> [Question] {
@@ -99,7 +95,7 @@ class PersoViewModel : ObservableObject {
     }
     
     func getPersonalityTrait() -> String {
-        totalScore < 5 ? quiz.aboutIntro : quiz.aboutExtro
+        totalScore < (5 * quiz.questions.count) ? quiz.aboutIntro : quiz.aboutExtro
     }
     
     func reset() {

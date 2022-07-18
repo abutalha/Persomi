@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IntroScreen: View {
+    @AppStorage("showIntro") var showIntro: Bool = true
+    
     var body: some View {
         VStack (alignment: .leading, spacing: 30) {
             Text("Are you an introvert or extrovert?")
@@ -22,7 +24,7 @@ struct IntroScreen: View {
                 .foregroundColor(.secondary)
             Spacer(minLength: 10)
             Button  {
-                print("OK, Let's Go")
+                showIntro = false
             } label: {
                 Text("OK, Let's Go")
                     .font(.headline)
